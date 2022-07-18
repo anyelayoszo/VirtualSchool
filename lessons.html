@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoCampus.com</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row v-center">
+        <div class="header-item item-left">
+          <div class="logo">
+            <a href="homepage.html">goCampus</a>
+          </div>
+        </div>
+        <!-- menu start here -->
+        <div class="header-item item-center">
+          <div class="menu-overlay">
+          </div>
+          <div class="search">
+            <div class="icon"></div>
+            <div class="input">
+              <input type="text" placeholder="Search" id="mysearch">
+            </div>
+            <span class="clear"></span>
+         </div>
+          <nav class="menu">
+            <div class="mobile-menu-head">
+              <div class="go-back"><i class="fa fa-angle-left"></i></div>
+              <div class="current-menu-title"></div>
+              <div class="mobile-menu-close">&times;</div>
+            </div>
+            <ul class="menu-main">
+              <li>
+                <a href="homepage.html">Home</a>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Kategoriler <i class="fa fa-angle-down"></i></a>
+                <div class="sub-menu mega-menu mega-menu-column-4">
+                  <div class="list-item">
+                    <h4 class="title">Mühendislik</h4>
+                    <ul>
+                      <li><a href="#">Bilgiasayar Mühendisliği</a></li>
+                      <li><a href="#">Gıda Mühendisliği</a></li>
+                      <li><a href="#">Makine Mühendisliği</a></li>
+                      <li><a href="#">Elektirik-Elektronik Mühendisliği</a></li>
+                      <li><a href="#">Endüstri Mühendisliği</a></li>
+                    </ul>
+                    <h4 class="title">Matematik</h4>
+                    <ul>
+                      <li><a href="#">Kalkülüs</a></li>
+                      <li><a href="#">İstatistik</a></li>
+                      <li><a href="#">Lineer Cebir</a></li>
+                      <li><a href="#">Olasılık</a></li>
+                      <li><a href="#">Ayrık Matematik</a></li>
+                      <li><a href="#">Temel Kalkülüs</a></li>
+                    </ul>
+                  </div>
+                  <div class="list-item">
+                    <h4 class="title">Beşeri Bilimler</h4>
+                    <ul>
+                      <li><a href="#">Felsefe</a></li>
+                      <li><a href="#">Sanat Tarihi</a></li>
+                      <li><a href="#">Edebiyat</a></li>
+                      <li><a href="#">İngiliz Edebiyatı</a></li>
+                    </ul>
+                    <h4 class="title">Bilim</h4>
+                    <ul>
+                      <li><a href="#">Fizik</a></li>
+                      <li><a href="#">Kimya</a></li>
+                      <li><a href="#">Biyoloji</a></li>
+                      <li><a href="#">Genel Kimya</a></li>
+                    </ul>
+                  </div>
+                  <div class="list-item">
+                    <h4 class="title">Sosyal Bilimler</h4>
+                    <ul>
+                      <li><a href="#">Psikoloji</a></li>
+                      <li><a href="#">Sosyoloji</a></li>
+                    </ul>
+                    <h4 class="title">Öğretmen Eğitimi</h4>
+                  </div>
+                  <div class="list-item">
+                    <h4 class="title">Dil Öğrenimi</h4>
+                    <ul>
+                      <li><a href="#">İngilizce</a></li>
+                      <li><a href="#">Almanca</a></li>
+                      <li><a href="#">İspanyolca</a></li>
+                      <li><a href="#">Fransızca</a></li>
+                      <li><a href="#">Japonca</a></li>
+                      <li><a href="#">Mesleki İngilizce</a></li>
+                    </ul>
+                    <h4 class="title">Sınava Hazırlık</h4>
+                    <ul>
+                      <li><a href="#">IELTS</a></li>
+                      <li><a href="#">TOEFL</a></li>
+                      <li><a href="#">KPSS</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Öğrenim İçeriğim <i class="fa fa-angle-down"></i></a>
+                <div class="sub-menu mega-menu mega-menu-column-1">
+                  <div class="list-item">
+                    <ul>
+                      <li><a href="#">Veri İletişimi ve Ağ Güvenliği</a></li>
+                      <li><a href="#">Python Programlama</a></li>
+                      <li><a href="#">Nesneye Yönelik Programlama</a></li>
+                      <a href="lessons.html">Öğrenim İçeriğim'e Gidin</a>  
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- menu end here -->
+          <div class="header-item item-right">
+            <ul>
+              <li class="header-li li_main"><img src="images/user.png" alt="profile_image">
+                <div class="dd_menu">
+                  <div class="dd_left">
+                    <ul>
+                      <li><i class="fas fa-map-marker-alt"></i></li>
+                      <li><i class="far fa-star"></i></li>
+                      <li><i class="far fa-plus-square"></i></li>
+                      <li><i class="fas fa-cog"></i></li>
+                      <li><i class="fas fa-download"></i></li>
+                      <li><i class="fas fa-sign-out-alt"></i></li>
+                    </ul>
+                  </div>
+                  <div class="dd_right">
+                    <ul>
+                      <li><a href="#">Öğrenim İçeriğim</a></li>
+                      <li><a href="#">Mesajlar</a></li>
+                      <li><a href="#">Profili Düzenle</a></li>
+                      <li><a href="#">Ayarlar</a></li>
+                      <li><a href="#">Yardım</a></li>
+                      <li><a href="#">Oturumu Kapat</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+         </div>
+  
+           <!--mobile menu trigger -->
+          <div class="mobile-menu-trigger">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<script>
+  const icon=document.querySelector('.icon');
+  const search=document.querySelector('.search');
+  icon.onclick= function(){
+    search.classList.toggle('active');
+  }
+
+</script>
+<script>
+  var li_main=document.querySelector(".li_main");
+
+  li_main.addEventListener("click",function(){
+     this.classList.toggle("active");
+  })
+</script>
+<script src="script.js"></script>
+<!--
+<div class="katman">
+    <div class="loading"></div>
+</div>
+-->
+<!--bu kısma navbar gelecek-->
+<nav class="boxles">
+    <div class="max-width">
+        <ul class="menu">
+            <li><a href="lessons.html">Tüm Dersler</a></li>
+            <li><a href="#">Derslerim</a></li>
+            <li><a href="#">İstek Listesi</a></li>
+            <li><a href="#">Arşivlenenler</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- section start-->
+<section class="boxes" id="boxes">
+  <div class="max-width">
+      <div class="box-content">
+          <div class="text-1"></div>
+  </div>
+</section>
+
+<footer>
+  <span>Created By <a href="#">GoCampus</a> | <span class="far fa-copyright"></span>2022 All rights reserved</span> 
+</footer>
+
+<script src="ornek.js"></script>
+<script>
+
+//----------REFERENCES-----------//
+let userlink = document.getElementById('userlink');
+let signoutlink = document.getElementById('signoutlink');
+let header = document.getElementById('hh');
+var currentUser = null;
+
+//-----------Functions-----------//
+function getUserName() {
+  let keepLoggedIn = localStorage.getItem('keepLoggedIn');
+  
+  if (keepLoggedIn == 'yes') {
+    currentUser = JSON.parse(localStorage.getItem('user'));
+  }
+  else {
+    currentUser = JSON.parse(sessionStorage.getItem('user'));
+  }
+}
+
+function Signout() {
+  sessionStorage.removeItem('user');
+  localStorage.removeItem('user');
+  localStorage.removeItem('keepLogedIn');
+  window.location = "signinupPage.html"
+}
+
+//----------Windows Loads-----------//
+window.onload = function () {
+  getUserName();
+  if(currentUser) 
+  {
+    userlink.innerText = currentUser.username;
+    header.innerText = "Welcome" + currentUser.username;
+    userlink.classList.replace("btn", "nav-link");
+    userlink.classList.remove("btn-primary");
+    userlink.href = "#";
+    
+    signoutlink.innerText = "Sign Out";
+    signoutlink.classList.replace("btn", "nav-link");
+    signoutlink.classList.remove("btn-success");
+    signoutlink.href = "javascript:Signout()";
+  }
+}
+
+</script>
+</body>
+</html>

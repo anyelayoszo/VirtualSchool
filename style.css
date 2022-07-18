@@ -1,0 +1,434 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.max-width{
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+/*nabvar styling*/
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 15px 0;
+  font-family: 'Ubuntu', sans-serif;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+  padding: 10px 0;
+  background: #ff7200;
+}
+
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .logo a span{
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span{
+  color: #fff;
+}
+
+.navbar .menu li{
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+  color: #ff7200;
+}
+
+.navbar.sticky .menu li a:hover{
+  color: #000;
+}
+
+.navbar .search {
+  width: 250px;
+  float: right;
+}
+
+.navbar .srch {
+  font-family: 'Ubuntu', sans-serif;
+  width: 150px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid #ff7200;
+  margin-top: 13px;
+  color: rgba(0, 0, 0, 0.5);
+  border-right: none;
+  font-size: 13px;
+  float: left;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.navbar.sticky .srch{
+  border: 1px solid #fff;
+}
+
+.btn {
+  width: 80px;
+  height: 30px;
+  background: #ff7200;
+  border: 2px solid #ff7200;
+  margin-top: 13px;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Ubuntu', sans-serif;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.navbar.sticky .btn{
+  background: #fff;
+  border: 2px solid #fff;
+  color: #ff7200;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.navbar .srch:focus {
+  outline: none;
+}
+
+.navbar .butonlar {
+  width: 205px; /*butonlar sığmazsa 205 yap diğer sayfaları da*/
+  float: right;
+}
+
+.btnlr {
+  width: 100px;
+  height: 30px;
+  background: #ff7200;
+  border: 2px solid #ff7200;
+  margin-top: 13px;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  border-radius: 10px;
+}
+
+.navbar.sticky .btnlr{
+  background: #fff;
+  border: 2px solid #fff;
+  color: #ff7200;
+}
+
+/*menu btn styling*/
+.menu-btn{
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+/*home styling*/ 
+.home{
+  display: flex;
+  background: url("images/education.jpeg") no-repeat center;
+  height: 50vh;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  min-height: 625px; /*resmin büyüklüğünü ayarlamak için örn contactda 300 sayfada daha yukarıdan başlıyor yazılar*/
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width{
+  margin: auto 0 auto 40px;
+}
+
+.home-content {
+  width: 1200px;
+  height: auto;
+  margin: auto;
+  /*color: #fff;*/
+  /*position: relative;*/
+}
+
+.home-content .par {
+  padding-left: 20px;
+  padding-bottom: 25px;
+  font-family: Arial;
+  letter-spacing: 1.2px;
+  line-height: 30px;
+}
+
+.home-content h1 {
+  font-family: "Times New Roman";
+  font-size: 50px;
+  padding-left: 20px;
+  margin-top: 9%;
+  letter-spacing: 2px;
+}
+
+.home-content p {
+  font-family: "Times New Roman";
+  font-size: 20px;
+  padding-left: 20px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  letter-spacing: 2px;
+}
+
+.home-content .cn {
+  width: 160px;
+  height: 40px;
+  background: #ff7200;
+  border: none;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.home-content .cn a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s ease;
+}
+
+.home-content .text-1{
+  font-size: 50px;
+  color: black;
+}
+
+.cn:hover {
+  background-color: #fff;
+}
+
+.home-content span {
+  color: #ff7200;
+  font-size: 60px;
+}
+
+/*
+.form-box
+{
+  width: 300px;
+  height: 350px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0.8) 50%
+  );
+  position: absolute;
+  top: -20px;
+  left: 870px;
+  margin:10% auto;
+  border-radius: 10px;
+  padding: 25px;
+  overflow: hidden;
+}
+
+.button-box
+{
+  text-align: center;
+	width:235px;
+	margin:0px 30px;
+	position:relative;
+	border-radius: 30px;
+}
+
+.toggle-bton
+{
+  font-family: "Calibri";
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+	padding:10px 30px;
+	cursor:pointer;
+	background:transparent;
+	border:0;
+	outline: none;
+	position:sticky;
+}
+#bton
+{
+	top: 0;
+	left:0;
+	position: absolute;
+	width: 130px;
+	height: 100%;
+	background: #000;
+	border-radius: 30px;
+	transition: .5s;
+}
+.input-group-login
+{
+	top: 130px;
+	position:absolute;
+	width:235px;
+	transition:.5s;
+}
+.input-group-register
+{
+  top: 90px;
+	position:absolute;
+	width:235px;
+	transition:.5s;
+}
+.input-field
+{
+	width: 100%;
+	padding:10px 0;
+	margin:5px 0;
+	border-left:0;
+	border-top:0;
+	border-right:0;
+	border-bottom: 1px solid #999;
+	outline:none;
+	background: transparent;
+}
+.submit-bton
+{
+	width: 85%;
+  margin: 20px 18px;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	background: #ff7200;
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+  font-size: 18px;
+  font-family: Calibri;
+  font-weight: bold;
+  color: #fff;
+}
+.check-box
+{
+	margin: 10px 10px 10px 0;
+}
+span
+{
+	color:#777;
+	font-size:13px;
+	bottom:68px;
+}
+#forgot{
+  color: #777;
+  text-align: left;
+  display: block;
+  float: right;
+  margin-top: 10px;
+  font-size: 13px;
+}
+a{
+  text-decoration: none;
+}
+#login
+{
+	left:50px;
+}
+#login input
+{
+	color:white;
+	font-size:15;
+}
+#register
+{
+	left:450px;
+}
+#register input
+{
+	color:white;
+	font-size: 15;
+}
+
+  /*responsive media query start*/
+  @media (max-width: 1208px){
+    .max-width{
+      padding: 0 50px;
+    }
+    .menu-btn{
+      display: block;
+      z-index: 999;
+    }
+    .menu-btn i.active:before{
+      content: "\f00d";
+    }
+    .navbar .menu{
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      background: #111;
+      text-align: center;
+      padding-top: 80px;
+      transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+      left: 0;
+    }
+    .navbar .menu li{
+      display: block;
+    }
+    .navbar .menu li a{
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 25px;
+    }
+    .navbar .search{
+      display: none;
+    }
+    .navbar .srch{
+      display: none;
+    }
+  }
+
+  .footer{
+    font-family: 'Poppins',sans-serif;
+  }
+
+  footer{
+    background: #111;
+    padding: 20px 23px;
+    color:#fff;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  footer span a{
+     color:#ff7200;
+     text-decoration: none;
+  }
+
+  footer span a:hover{
+    text-decoration: underline;
+  }
+  

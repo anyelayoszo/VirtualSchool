@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoCampus.com</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row v-center">
+        <div class="header-item item-left">
+          <div class="logo">
+            <a href="homepage.html">goCampus</a>
+          </div>
+        </div>
+        <!-- menu start here -->
+        <div class="header-item item-center">
+          <div class="menu-overlay">
+          </div>
+          <div class="search">
+            <div class="icon"></div>
+            <div class="input">
+              <input type="text" placeholder="Search" id="mysearch">
+            </div>
+            <span class="clear"></span>
+         </div>
+          <nav class="menu">
+            <div class="mobile-menu-head">
+              <div class="go-back"><i class="fa fa-angle-left"></i></div>
+              <div class="current-menu-title"></div>
+              <div class="mobile-menu-close">&times;</div>
+            </div>
+            <ul class="menu-main">
+              <li>
+                <a href="homepage.html">Home</a>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Kategoriler <i class="fa fa-angle-down"></i></a>
+                <div class="sub-menu mega-menu mega-menu-column-4">
+                  <div class="list-item">
+                    <h4 class="title">Mühendislik</h4>
+                    <ul>
+                      <li><a href="#">Bilgiasayar Mühendisliği</a></li>
+                      <li><a href="#">Gıda Mühendisliği</a></li>
+                      <li><a href="#">Makine Mühendisliği</a></li>
+                      <li><a href="#">Elektirik-Elektronik Mühendisliği</a></li>
+                      <li><a href="#">Endüstri Mühendisliği</a></li>
+                    </ul>
+                    <h4 class="title">Matematik</h4>
+                    <ul>
+                      <li><a href="#">Kalkülüs</a></li>
+                      <li><a href="#">İstatistik</a></li>
+                      <li><a href="#">Lineer Cebir</a></li>
+                      <li><a href="#">Olasılık</a></li>
+                      <li><a href="#">Ayrık Matematik</a></li>
+                      <li><a href="#">Temel Kalkülüs</a></li>
+                    </ul>
+                  </div>
+                  <div class="list-item">
+                    <h4 class="title">Beşeri Bilimler</h4>
+                    <ul>
+                      <li><a href="#">Felsefe</a></li>
+                      <li><a href="#">Sanat Tarihi</a></li>
+                      <li><a href="#">Edebiyat</a></li>
+                      <li><a href="#">İngiliz Edebiyatı</a></li>
+                    </ul>
+                    <h4 class="title">Bilim</h4>
+                    <ul>
+                      <li><a href="#">Fizik</a></li>
+                      <li><a href="#">Kimya</a></li>
+                      <li><a href="#">Biyoloji</a></li>
+                      <li><a href="#">Genel Kimya</a></li>
+                    </ul>
+                  </div>
+                  <div class="list-item">
+                    <h4 class="title">Sosyal Bilimler</h4>
+                    <ul>
+                      <li><a href="#">Psikoloji</a></li>
+                      <li><a href="#">Sosyoloji</a></li>
+                    </ul>
+                    <h4 class="title">Öğretmen Eğitimi</h4>
+                    <ul>
+                      
+                    </ul>
+                  </div>
+                  <div class="list-item">
+                    <h4 class="title">Dil Öğrenimi</h4>
+                    <ul>
+                      <li><a href="#">İngilizce</a></li>
+                      <li><a href="#">Almanca</a></li>
+                      <li><a href="#">İspanyolca</a></li>
+                      <li><a href="#">Fransızca</a></li>
+                      <li><a href="#">Japonca</a></li>
+                      <li><a href="#">Mesleki İngilizce</a></li>
+                    </ul>
+                    <h4 class="title">Sınava Hazırlık</h4>
+                    <ul>
+                      <li><a href="#">IELTS</a></li>
+                      <li><a href="#">TOEFL</a></li>
+                      <li><a href="#">KPSS</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            
+              <li class="menu-item-has-children">
+                <a href="lessons.html">Öğrenim İçeriğim <i class="fa fa-angle-down"></i></a>
+                <div class="sub-menu mega-menu mega-menu-column-1">
+                  <div class="list-item">
+                    <ul>
+                      <li><a href="#">Deneme1</a>
+                        <div class="katman">
+                          <div class="loadingders"></div>
+                        </div>
+                      <li><a href="#">Deneme2</a>
+                        <div class="katman">
+                          <div class="loadingders"></div>
+                        </div>
+                      <li><a href="#">Deneme3</a>
+                        <div class="katman">
+                          <div class="loadingders"></div>
+                        </div>
+                          <a href="lessons.html">Öğrenim İçeriğim'e Gidin</a>  
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- menu end here -->
+        <div class="header-item item-right">
+          <ul>
+            <li class="header-li li_main"><img src="images/user.png" alt="profile_image">
+              <div class="dd_menu">
+                <div class="dd_left">
+                  <ul>
+                
+                  </ul>
+                </div>
+                <div class="dd_right">
+                  <ul>
+                    <li><a href="#">Öğrenim İçeriğim</a></li>
+                    <li><a href="#">Mesajlar</a></li>
+                    <li><a href="profilepage.html">Profili Düzenle</a></li>
+                    <li><a href="#">Ayarlar</a></li>
+                    <li><a href="#">Yardım</a></li>
+                    <li><a href="#">Oturumu Kapat</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+       </div>
+
+           <!--mobile menu trigger -->
+          <div class="mobile-menu-trigger">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- section start-->
+  <!--Kopyalanan kısım burası-->
+
+  <section class="slider">
+    <div 
+    id="carouselCoursSlider" 
+    class="carousel slide" 
+    data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/education3.jpeg" class="d-block w-100" alt="Online school">
+        </div>
+        <div class="carousel-item">
+          <img src="images/education5.png" class="d-block w-100" alt="Onlie Okul">
+        </div>
+        <div class="carousel-item">
+          <img src="images/uzaktan-egitim-kesfet-5.jpg" class="d-block w-100" alt="Uzaktan Erişim">
+        </div>
+      </div>
+      <button 
+      class="carousel-control-prev"
+      type="button" 
+      data-bs-target="#carouselCoursSlider" 
+      data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" 
+      type="button" 
+      data-bs-target="#carouselCoursSlider" 
+      data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="store my-5">
+    <div class="filter__background"></div>
+    <ul class="filter">
+       <li class="active">Tümü</li>
+       <li>Yazılım</li>
+       <li>Matematik</li>
+       <li>Fen Bilimleri</li>
+       <li>Felsefe</li>
+       <li>Psikoloji</li>
+       <li>Sosyoloji</li>
+       <li>Bilgisayar Bilimleri</li>
+       <li>Yabancı Diller</li>
+    </ul>
+     <div class="row">
+       <div class="col-5 offset-2 my-5">
+         <div class="row course__card">
+           <div class="col-6">
+            <img class="img-fluid shadow" src="images/excel-egitimi-1200x900.jpg" width="258" height="400">
+           </div>
+           <div class="col-6  d-flex flex-column justify-content-between">
+              <div class="course_detail">
+                <span class="fos gray fs-5">Elif Gaye Akyüz</span><br/>
+                <span class="fs-4 fw-bold">Sıfırdan İleri Düzey Excell Eğitimi</span><br/>
+                <span class="course__star-rate">
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <span class="gray">250 reviews</span>
+                </span>
+              </div>
+              <button class="btn__purple">Kursa Gözat</button>
+          </div>
+         </div>  
+        </div>
+        <div class="col-5 my-5">
+          <div class="row course__card">
+            <div class="col-6">
+             <img class="img-fluid shadow" src="images/vtys.png" width="258" height="400">
+            </div>
+            <div class="col-6  d-flex flex-column justify-content-between">
+               <div class="course_detail">
+                 <span class="fos gray fs-5">Sadi Evren Şeker</span><br/>
+                 <span class="fs-4 fw-bold">Veri Tabanı Yönetim Sistemleri</span><br/>
+                 <span class="course__star-rate">
+                   <i class="bi bi-star-fill active"></i>
+                   <i class="bi bi-star-fill active"></i>
+                   <i class="bi bi-star-fill active"></i>
+                   <i class="bi bi-star-fill active"></i>
+                   <i class="bi bi-star-fill "></i>
+                   <span class="gray">250 reviews</span>
+                 </span>
+               </div>
+               <button class="btn__purple">Kursa Gözat</button>
+           </div>
+          </div> 
+        </div>
+        <div class="col-5 offset-2 my-5">
+          <div class="row course__card">
+            <div class="col-6">
+             <img class="img-fluid shadow" src="images/felsefe.jpg" width="258" height="400">
+            </div>
+            <div class="col-6  d-flex flex-column justify-content-between">
+               <div class="course_detail">
+                 <span class="fos gray fs-5">Ceyhun Görkem Göksu</span><br/>
+                 <span class="fs-4 fw-bold">Felsefeye Giriş</span><br/>
+                 <span class="course__star-rate">
+                   <i class="bi bi-star-fill active"></i>
+                   <i class="bi bi-star-fill active"></i>
+                   <i class="bi bi-star-fill active"></i>
+                   <i class="bi bi-star-fill"></i>
+                   <i class="bi bi-star-fill"></i>
+                   <span class="gray">250 reviews</span>
+                 </span>
+               </div>
+               <button class="btn__purple">Kursa Gözat</button>
+           </div>
+          </div>  
+         </div>
+         <div class="col-5 my-5">
+           <div class="row course__card">
+             <div class="col-6">
+              <img class="img-fluid shadow" src="images/mobil-uygulama-gelistirme.png" width="258" height="400">
+             </div>
+             <div class="col-6  d-flex flex-column justify-content-between">
+                <div class="course_detail">
+                  <span class="fos gray fs-5">Mehmet Taşçı</span><br/>
+                  <span class="fs-4 fw-bold">Mobil Uygulama Geliştirme</span><br/>
+                  <span class="course__star-rate">
+                    <i class="bi bi-star-fill active"></i>
+                    <i class="bi bi-star-fill active"></i>
+                    <i class="bi bi-star-fill active"></i>
+                    <i class="bi bi-star-fill active"></i>
+                    <i class="bi bi-star-fill active"></i>
+                    <span class="gray">250 reviews</span>
+                  </span>
+                </div>
+                <button class="btn__purple">Kursa Gözat</button>
+            </div>
+           </div> 
+         </div>
+         <div class="col-5 offset-2 my-5">
+          <div class="row course__card">
+            <div class="col-6">
+             <img class="img-fluid shadow" src="images/ingilizce.png" width="258" height="400">
+            </div>
+            <div class="col-6  d-flex flex-column justify-content-between">
+               <div class="course_detail">
+                 <span class="fos gray fs-5">Aleyna Özsoy</span><br/>
+                 <span class="fs-4 fw-bold">Mesleki İngilizce</span><br/>
+                 <span class="course__star-rate">
+                   <i class="bi bi-star-fill active"></i>
+                   <i class="bi bi-star-fill active"></i>
+                   <i class="bi bi-star-fill active"></i>
+                   <i class="bi bi-star-fill active"></i>
+                   <i class="bi bi-star-fill active"></i>
+                   <span class="gray">250 reviews</span>
+                 </span>
+               </div>
+               <button class="btn__purple">Kursa Gözat</button>
+           </div>
+          </div>  
+         </div>
+         <div class="col-5 my-5">
+           <div class="row course__card">
+             <div class="col-6">
+              <img class="img-fluid shadow" src="images/sosyolog-nedir-ne-is-yapar-2594.jpg" width="258" height="400">
+             </div>
+             <div class="col-6  d-flex flex-column justify-content-between">
+                <div class="course_detail">
+                  <span class="fos gray fs-5">Bişeng Çelik</span><br/>
+                  <span class="fs-4 fw-bold">Sosyolojiye Giriş</span><br/>
+                  <span class="course__star-rate">
+                    <i class="bi bi-star-fill active"></i>
+                    <i class="bi bi-star-fill active"></i>
+                    <i class="bi bi-star-fill active"></i>
+                    <i class="bi bi-star-fill active"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <span class="gray">250 reviews</span>
+                  </span>
+                </div>
+                <button class="btn__purple">Kursa Gözat</button>
+            </div>
+           </div> 
+         </div>
+        </div>
+       </div>
+       
+     </div>
+  </section>
+
+  
+<footer>
+  <span>Created By <a href="#">GoCampus</a> | <span class="far fa-copyright"></span>2022 All rights reserved</span> 
+</footer>
+
+<script>
+  const icon=document.querySelector('.icon');
+  const search=document.querySelector('.search');
+  icon.onclick= function(){
+    search.classList.toggle('active');
+  }
+</script>
+
+<script>
+  var li_main=document.querySelector(".li_main");
+
+  li_main.addEventListener("click",function(){
+     this.classList.toggle("active");
+  })
+</script>
+<script src="script.js"></script>
+<script
+      type="text/javascript"
+      src="js/bootstrap.min.js"
+    ></script>
+
+
+
+<script src="ornek.js"></script>
+<script>
+
+//----------REFERENCES-----------//
+let userlink = document.getElementById('userlink');
+let signoutlink = document.getElementById('signoutlink');
+let header = document.getElementById('hh');
+var currentUser = null;
+
+//-----------Functions-----------//
+function getUserName() {
+  let keepLoggedIn = localStorage.getItem('keepLoggedIn');
+  
+  if (keepLoggedIn == 'yes') {
+    currentUser = JSON.parse(localStorage.getItem('user'));
+  }
+  else {
+    currentUser = JSON.parse(sessionStorage.getItem('user'));
+  }
+}
+
+function Signout() {
+  sessionStorage.removeItem('user');
+  localStorage.removeItem('user');
+  localStorage.removeItem('keepLogedIn');
+  window.location = "signinupPage.html"
+}
+
+//----------Windows Loads-----------//
+window.onload = function () {
+  getUserName();
+  if(currentUser) 
+  {
+    userlink.innerText = currentUser.username;
+    header.innerText = "Welcome" + currentUser.username;
+    userlink.classList.replace("btn", "nav-link");
+    userlink.classList.remove("btn-primary");
+    userlink.href = "#";
+    
+    signoutlink.innerText = "Sign Out";
+    signoutlink.classList.replace("btn", "nav-link");
+    signoutlink.classList.remove("btn-success");
+    signoutlink.href = "javascript:Signout()";
+  }
+}
+
+</script>
+</body>
+</html>

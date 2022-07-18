@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link 
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+         crossorigin="anonymous">
+     <link rel="stylesheet" href="signinsignup.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+     <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="index.html">goCampus</a></div>
+            <ul class="menu">
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="howitworks.html">Nasıl Çalışır</a></li>
+                <li><a href="contact.html">Bize Ulaşın</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+  </head>
+
+  <body>
+      
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="#" class="sign-in-form">
+                    <h2 class="title">Giriş</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username" id="userInp1"/>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock" onclick="show2()"></i>
+                        <input type="password" placeholder="Password" id="passInp1"/>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1">Keep me Logged in</label>
+                    </div>
+                    <button type="text" id="log_btn" class="btn solid">Giriş</button>
+                    <a href="#">Şifremi Unuttum</a>
+                    <p class="social-text">Or Sign in with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+         
+                <form action="#" class="sign-up-form">
+                    <h2 class="title">Kayıt</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username"  id="userInp" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" placeholder="Email" id="emailInp" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock" onclick="show()"></i>
+                        <input type="password" placeholder="Password" id="passInp"/>
+                    </div>
+                    <button type="text" id="sub_btn" class="btn solid" >Kayıt Ol</button>
+                  
+                    <a href="resetPass.html">Şifremi Unuttum</a>
+                    <p class="social-text">Or Sign Up with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>           
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Hesabınız Yok Mu?</h3>
+                    <p>Hemen bir hesap oluşturup kaydolun ve öğrenmeye başlayın
+                        Yada hemen bir eğitim vermeye başlayın.Tüm kurs oluşturma kaynaklarına erişim sağlayın.
+                    </p>
+                    <button class="btn transparent" id="sign-up-button">Kayıt Ol</button>
+                </div>
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Zaten bir hesabınız var mı?</h3>
+                    <p></p>
+                    <button class="btn transparent" id="sign-in-button">Giriş</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <footer>
+        <span>Created By <a href="#">GoCampus</a> | <span class="far fa-copyright"></span>2022 All rights reserved</span> 
+     </footer>
+
+     <script src="siginsignup.js"></script>
+     <script type="module">
+
+                       //   FİREBASE CONFİG //
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+ 
+      const firebaseConfig = {
+       apiKey: "AIzaSyBJ_2nx6-xf5_piS-a7rSQFWNojaMwlRUw",
+       authDomain: "virtualschoolfirebase.firebaseapp.com",
+       databaseURL: "https://virtualschoolfirebase-default-rtdb.firebaseio.com",
+       projectId: "virtualschoolfirebase",
+       storageBucket: "virtualschoolfirebase.appspot.com",
+       messagingSenderId: "564476107923",
+       appId: "1:564476107923:web:3ed27fe51d9ada05198166"
+     };
+      
+      const app = initializeApp(firebaseConfig);
+
+      import { getDatabase, ref, set, child, get}
+         from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js"
+
+      const db = getDatabase();  
+
+
+      //------------THE REFRENECES------------//
+
+      const username = document.getElementById('userInp');
+      const username2 =document.getElementById('userInp1')
+      const email = document.getElementById('emailInp');
+      const pass = document.getElementById('passInp');
+      const pass2=document.getElementById('passInp1');
+      const submit = document.getElementById('sub_btn')
+      const loginn=document.getElementById('log_btn')
+
+      //-------------Validation-------------//
+
+      function isEmptyOrSpaces(str){
+          return str === null || str.match(/^ *$/) !== null;
+      }
+
+      function Validation(){
+         let userregex = /^[a-zA-Z0-9]{5,}$/;
+         let emailregex = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook|hotmail)\.com$/;
+         
+         if(isEmptyOrSpaces(email.value) || isEmptyOrSpaces(username.value) || isEmptyOrSpaces(pass.value)){
+             alert("You cannot left any field empty");
+             return false;
+         }
+        
+         if(!userregex.test(username.value)){
+             alert("-username can only be alphanumeric\n-username must be aleast 5 characters\n-username cannot contain spaces");
+             return false;
+         }
+
+         if(!emailregex.test(email.value)){
+             alert("enter a valid email");
+             return false;
+         }
+         return true;
+      }
+
+      //----------Register User To Firebase--------//
+      
+      function RegisterUser(){
+          if(!Validation()){
+              return;
+          };
+          const dbRef = ref(db);
+          get(child(dbRef, "UsersList/"+ username.value)).then((snapshot)=>{
+              if(snapshot.exists()){
+                  alert("Account Already Exits!");
+              } 
+              else{
+                  set(ref(db, "UsersList/"+ username.value),
+                  {
+                     username: username.value,
+                     email: email.value,
+                     password: encPass()
+                  })
+                  .then(()=>{
+                      alert("User added successfully");
+                  })
+                  .catch((error)=>{
+                      alert("error"+ error);
+                  })
+              }
+          });
+
+          //Move on with auth//
+      }
+
+      //----------ENCRİPTİON------------//
+
+      function encPass(){
+          var pass12 = CryptoJS.AES.encrypt(pass.value,pass.value);
+          return pass12.toString();
+      }
+
+      //----------AUTHENTICATION PROCESS------//
+
+      function AuthenticateUser(){
+          const dbRef = ref(db)
+          get(child(dbRef, "UsersList/"+ username.value)).then((snapshot)=>{
+              if(snapshot.exists()){
+                  console.log(pass.value);
+                  let test=document.getElementById('userInp1').value;
+                  console.log(snapshot.val()[test].password);
+                  let passdeneme=decPass(snapshot.val()[test].password);
+                  if(passdeneme == pass2.value){
+                      login(snapshot.val());
+                  }
+                  else{
+                      console.log(pass2.value);
+                      alert("User does not exist");
+                  }
+              } 
+              else{
+                  alert("Username or password in valid")
+              }
+          });
+      }
+
+      //-------Decript Process-------//
+
+      function decPass(test){
+          let pass12 = CryptoJS.AES.decrypt(test,pass2.value);
+          return pass12.toString(CryptoJS.enc.Utf8);
+      }
+
+      //-------Login---------//
+      function login(user){
+          
+          let keepLoggedIn = document.getElementById('customSwitch1').checked;
+          if(!keepLoggedIn){
+              sessionStorage.setItem('user',JSON.stringify(user));
+              window.location="homepage.html";
+          } 
+          else{
+              sessionStorage.setItem('keepLoggedIn','yes');
+              sessionStorage.setItem('user',JSON.stringify(user));
+              window.location="homepage.html";
+          }
+      }
+      //-----------Assign The Events-------//
+
+      submit.addEventListener('click',RegisterUser);
+      loginn.addEventListener('click',AuthenticateUser);
+
+   </script>
+   
+  </body>
+</html>

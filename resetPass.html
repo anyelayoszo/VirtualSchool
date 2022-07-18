@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link 
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+         crossorigin="anonymous">
+     <link rel="stylesheet" href="resetPass.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+     <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="index.html">goCampus</a></div>
+            <ul class="menu">
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="howitworks.html">Nasıl Çalışır</a></li>
+                <li><a href="contact.html">Bize Ulaşın</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+  </head>
+
+  <body>
+      
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="#" class="sign-in-form">
+                    <h2 class="title">Şifremi Unuttum</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Email Adresi" id="email"/>
+                    </div>
+                    <button type="text" id="log_reset" class="btn solid">Şifreyi Sıfırla</button>
+                    <p>Zaten bir hesabınız var mı?</p>
+                    <a href="signinupPage.html">Giriş Yap</a>
+                </form>
+            </div>           
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Şifremi Unuttum</h3>
+                    <p>Giriş yapabilmek için mail adresinize sıfırlama maili gönderilecektir.
+                        Oradan sıfırlama işlemi ile işleminizi gerçekleştirebilirsiniz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <footer>
+        <span>Created By <a href="#">GoCampus</a> | <span class="far fa-copyright"></span>2022 All rights reserved</span> 
+     </footer>
+
+     <script src="siginsignup.js"></script>
+     <script type="module">
+
+                       //   FİREBASE CONFİG //
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+ 
+      const firebaseConfig = {
+       apiKey: "AIzaSyBJ_2nx6-xf5_piS-a7rSQFWNojaMwlRUw",
+       authDomain: "virtualschoolfirebase.firebaseapp.com",
+       databaseURL: "https://virtualschoolfirebase-default-rtdb.firebaseio.com",
+       projectId: "virtualschoolfirebase",
+       storageBucket: "virtualschoolfirebase.appspot.com",
+       messagingSenderId: "564476107923",
+       appId: "1:564476107923:web:3ed27fe51d9ada05198166"
+     };
+      
+      const app = initializeApp(firebaseConfig);
+
+      import { getDatabase, ref, set, child, get}
+         from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js"
+
+      const auth=firebase.auth();
+      const db = getDatabase();  
+
+
+      //------------THE REFRENECES------------//
+
+      const pass2=document.getElementById('passInp1');
+      const resett=document.getElementById('log_reset');
+
+      //-------------Validation-------------//
+
+      function isEmptyOrSpaces(str){
+          return str === null || str.match(/^ *$/) !== null;
+      }
+
+      function Validation(){
+         let emailregex = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook|hotmail)\.com$/;
+         
+         if(isEmptyOrSpaces(email.value)){
+             alert("You cannot left any field empty");
+             return false;
+         }
+    
+         if(!emailregex.test(email.value)){
+             alert("enter a valid email");
+             return false;
+         }
+         return true;
+      }
+
+
+      //----------AUTHENTICATION PROCESS------//
+
+      function AuthenticateUser(){
+          const dbRef = ref(db)
+          get(child(dbRef, "UsersList/"+ username.value)).then((snapshot)=>{
+              if(snapshot.exists()){
+                  console.log(pass.value);
+                  let test=document.getElementById('userInp1').value;
+                  console.log(snapshot.val()[test].password);
+                  let passdeneme=decPass(snapshot.val()[test].password);
+                  if(passdeneme == pass2.value){
+                      login(snapshot.val());
+                  }
+                  else{
+                      console.log(pass2.value);
+                      alert("User does not exist");
+                  }
+              } 
+              else{
+                  alert("Username or password in valid")
+              }
+          });
+      }
+
+
+      //-------Login---------//
+      function login(user){
+          
+          let keepLoggedIn = document.getElementById('customSwitch1').checked;
+          if(!keepLoggedIn){
+              sessionStorage.setItem('user',JSON.stringify(user));
+              window.location="homepage.html";
+          } 
+          else{
+              sessionStorage.setItem('keepLoggedIn','yes');
+              sessionStorage.setItem('user',JSON.stringify(user));
+              window.location="homepage.html";
+          }
+      }
+      //-----------Assign The Events-------//
+
+      submit.addEventListener('click',RegisterUser);
+      loginn.addEventListener('click',AuthenticateUser);
+
+   </script>
+   
+  </body>
+</html>
