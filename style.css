@@ -151,6 +151,10 @@
   cursor: pointer;
   display: none;
 }
+/* section styling */
+section{
+  padding: 40px 0;
+}
 
 /*home styling*/ 
 .home{
@@ -232,6 +236,134 @@
   color: #ff7200;
   font-size: 60px;
 }
+
+/*about section styling*/
+.about{
+  font-family: 'Poppins',sans-serif;
+}
+
+.about .title{
+  position: relative;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu',sans-serif;
+}
+
+.about .title::before{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+
+.about .about-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about .about-content .text-1{
+  font-size: 70px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.about .about-content .left{
+  width: 45%;
+
+}
+.about .about-content .left img{
+  height: 400px;
+  width:400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.about .about-content .right{
+  width: 55%;
+}
+
+.about .about-content .right .text-2{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px ;
+}
+
+.about .about-content .right .text-2 span{
+  color: #ff7200;
+}
+
+.about .about-content .right p{
+  text-align: justify;
+}
+
+.about .about-content .right a{
+  display: inline-block;
+  background: #ff7200;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 6px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid #ff7200;
+  transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover{
+  color: #ff7200;
+  background: none;
+}
+
+
+.about .about-content .right img{
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+  left: -50px;
+}
+
+.about .about-content .left .text-2{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px ;
+}
+
+.about .about-content .left .text-2 span{
+  color: #ff7200;
+}
+
+.about .about-content .left p{
+  text-align: justify;
+}
+
+.about .about-content .left a{
+  display: inline-block;
+  background: #ff7200;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 6px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid #ff7200;
+  transition: all 0.3s ease;
+}
+
+.about .about-content .left a:hover{
+  color: #ff7200;
+  background: none;
+}
+
 
   /*responsive media query start*/
   @media (max-width: 1208px){
