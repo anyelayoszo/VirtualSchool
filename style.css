@@ -1,4 +1,8 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Nunito+Sans:wght@200;300;400&family=Raleway:wght@200;300&family=Roboto+Mono:wght@300&display=swap');
+
+*,
+*::before,
+::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,7 +22,7 @@
   width: 100%;
   z-index: 999;
   padding: 15px 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: transparent;
   transition: all 0.3s ease;
 }
@@ -76,7 +80,7 @@
 }
 
 .navbar .srch {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   width: 150px;
   height: 30px;
   background: transparent;
@@ -135,7 +139,7 @@
   margin-top: 13px;
   color: #fff;
   font-size: 15px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   border-radius: 10px;
 }
 
@@ -160,13 +164,13 @@ section{
 /*home styling*/ 
 .home{
   display: flex;
-  background: url("images/education.jpeg") no-repeat center;
+  background: url("images/howitworks.jpeg") no-repeat center;
   height: 50vh;
   background-size: cover;
   background-attachment: fixed;
   color: #fff;
-  min-height: 625px; /*resmin büyüklüğünü ayarlamak için örn contactda 300 sayfada daha yukarıdan başlıyor yazılar*/
-  font-family: 'Ubuntu', sans-serif;
+  min-height: 100vh; /*resmin büyüklüğünü ayarlamak için örn contactda 300 sayfada daha yukarıdan başlıyor yazılar*/
+  font-family: 'Roboto Mono', monospace;
 }
 
 .home .max-width{
@@ -197,7 +201,7 @@ section{
   top: 50%;
   left: 50%;
   transform: translateX(50%);*/
-  font-family: "Times New Roman";
+  font-family: 'Roboto Mono', monospace;
   font-size: 50px;
   /*padding-left: 20px;
   margin-top: 9%;
@@ -205,7 +209,7 @@ section{
 }
 
 .home-content p {
-  font-family: "Times New Roman";
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   padding-left: 20px;
   margin-top: 2%;
@@ -245,132 +249,188 @@ section{
   font-size: 60px;
 }
 
-/*about section styling*/
+/*about section styling start*/
 .about{
-  font-family: 'Poppins',sans-serif;
+  margin-bottom: 150px;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
-.about .title{
-  position: relative;
+.about .about-title{
+margin: 30px 0;
+}
+
+.about-title h2{
+  width: 100%;
   text-align: center;
-  font-size: 35px;
-  font-weight: 500;
-  margin-bottom: 60px;
-  padding-bottom: 20px;
-  font-family: 'Ubuntu',sans-serif;
-}
-
-.about .title::before{
+  margin: 0 ;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+ }
+  
+.about-title h2::after{
   content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 180px;
+  width: 120px;
   height: 3px;
-  background: #111;
-  transform: translateX(-50%);
+  background-color: #111;
+  margin: 0 auto;
+  display: block;
+  margin-top: 5px;
 }
-
-.about .about-content{
+  
+.about-content{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+  
+.about-img{
+  width: 40%;
+}
+  
+.about-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+  
+.about-text{
+  width: 40%;
+  align-items: center;
+}
+  
+h4{
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 0.5rem;
+  font-weight: 150;
+}
+  
+.about-text p{
+  font-size: 15px;
+  text-align: center;
 }
 
-.about .about-content .text-1{
-  font-size: 70px;
+.btn-more{
+  position: absolute;
+  display: block;
+  background: #ff7200;
+  color: #fff;
+  width: 135px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 15px;
+  margin-top: 20px;
+  margin-left: 12.5%;
+  border-radius: 6px;
+  border: 2px solid #ff7200;
+  transition: all 0.3s ease;
+}
+  
+.btn-more:hover{
+  color: #ff7200;
+  background: none;
+}
+/*about section styling finish*/
+
+/*educate section styling start*/
+.educate{
+  margin-bottom: 150px;
+  font-family: 'Poppins',sans-serif;
+}
+
+.educate .educate-title{
+margin: 30px 0;
+}
+
+.educate-title h2{
+  width: 100%;
+  text-align: center;
+  margin: 0 ;
+  font-family: "Arial";
+  font-size: 30px;
+  font-weight: 600;
+}
+  
+.educate-title h2::after{
+  content: "";
+  width: 120px;
+  height: 3px;
+  background-color: #111;
+  margin: 0 auto;
+  display: block;
+  margin-top: 5px;
+}
+  
+
+/*educate section styling start
+.educate{
+  display: flex;
+  background: url("https://s.udemycdn.com/teaching/billboard-desktop-v4.jpg") no-repeat center;
+  height: 50vh;
+  background-size: cover;
+  background-attachment: fixed;
+  color: black;
+  min-height: 650px;
+  font-family: 'Ubuntu', sans-serif;
+}
+  
+.educate .max-width{
+  margin: auto 0 auto 40px;
+}*/
+  
+.educate .educate-content .text-1{
+  font-size: 50px;
   font-weight: 600;
   margin-left: -3px;
 }
-
-.about .about-content .left{
-  width: 45%;
-
-}
-.about .about-content .left img{
-  height: 400px;
-  width:400px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.about .about-content .right{
-  width: 55%;
-}
-
-.about .about-content .right .text-2{
-  font-size: 25px;
+  
+.educate .educate-content .text-2{
+  font-size: 50px;
   font-weight: 600;
-  margin-bottom: 10px ;
+  margin-left: -3px;
 }
-
-.about .about-content .right .text-2 span{
-  color: #ff7200;
+  
+.educate .educate-content .text-3{
+  font-size: 20px;
+  font-weight: 350;
+  margin-left: -3px;
 }
-
-.about .about-content .right p{
-  text-align: justify;
+  
+.educate .educate-content .text-4{
+  font-size: 20px;
+  font-weight: 350;
+  margin-left: -3px;
 }
-
-.about .about-content .right a{
-  display: inline-block;
-  background: #ff7200;
-  color: #fff;
+  
+.educate .button{
+  margin: 14px 0;
+}
+ 
+.educate .button button{
+  outline: none;
+  color:#fff;
   font-size: 20px;
   font-weight: 500;
-  padding: 6px 30px;
-  margin-top: 20px;
-  border-radius: 6px;
-  border: 2px solid #ff7200;
-  transition: all 0.3s ease;
+  padding: 9px 125px;
+  background: #1c1d1f;
+  border: 2px solid transparent;
+  transition: all 0.4 ease;
 }
-
-.about .about-content .right a:hover{
-  color: #ff7200;
-  background: none;
-}
-
-
-.about .about-content .right img{
-  height: 400px;
-  width: 400px;
-  object-fit: cover;
-  border-radius: 6px;
-  left: -50px;
-}
-
-.about .about-content .left .text-2{
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 10px ;
-}
-
-.about .about-content .left .text-2 span{
-  color: #ff7200;
-}
-
-.about .about-content .left p{
-  text-align: justify;
-}
-
-.about .about-content .left a{
-  display: inline-block;
-  background: #ff7200;
+  
+.educate .button button:hover{
   color: #fff;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 6px 30px;
-  margin-top: 20px;
-  border-radius: 6px;
-  border: 2px solid #ff7200;
-  transition: all 0.3s ease;
+  background-color: black;
+  border-color: #1c1d1f ;
 }
+/*educate section styling finish*/
 
-.about .about-content .left a:hover{
-  color: #ff7200;
-  background: none;
-}
+
 
 
   /*responsive media query start*/
