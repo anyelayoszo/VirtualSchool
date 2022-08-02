@@ -153,9 +153,10 @@
 .menu-btn{
   color: #fff;
   font-size: 23px;
-  cursor: pointer;
+  cursor: pointer; /fare imleci basılabilir oluyor
   display: none;
 }
+
 /* section styling */
 section{
   padding: 40px 0;
@@ -164,7 +165,7 @@ section{
 /*home styling*/ 
 .home{
   display: flex;
-  background: url("images/howitworks.jpeg") no-repeat center;
+  background: url("images/howitworks.jpeg") no-repeat center; /*object-fit: cover resmin büyüklüğünü bpyutuna göre ayarlar*/
   height: 50vh;
   background-size: cover;
   background-attachment: fixed;
@@ -294,6 +295,7 @@ margin: 30px 0;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+  
 }
   
 .about-text{
@@ -352,7 +354,7 @@ margin: 30px 0;
   width: 100%;
   text-align: center;
   margin: 0 ;
-  font-family: "Arial";
+  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   font-weight: 600;
 }
@@ -366,136 +368,142 @@ margin: 30px 0;
   display: block;
   margin-top: 5px;
 }
-  
+ 
+.educate .educate-content{
+	display: flex; /*yan yana*/
+	flex-wrap: wrap; /*sığmayanlar aşağıya, overflow hidden: sığmayanları sakla*/
+	align-items: center;
+	justify-content: space-between;
+}
 
-/*educate section styling start
-.educate{
-  display: flex;
-  background: url("https://s.udemycdn.com/teaching/billboard-desktop-v4.jpg") no-repeat center;
-  height: 50vh;
-  background-size: cover;
-  background-attachment: fixed;
-  color: black;
-  min-height: 650px;
-  font-family: 'Ubuntu', sans-serif;
+.educate .educate-content .card{
+	width: calc(33% - 20px);
+	text-align: center;
+	border-radius: 6px;
+	padding: 20px 25px;
 }
-  
-.educate .max-width{
-  margin: auto 0 auto 40px;
-}*/
-  
-.educate .educate-content .text-1{
-  font-size: 50px;
-  font-weight: 600;
-  margin-left: -3px;
+
+.educate .educate-content .card .box{
+	transition: all 0.3s ease;
 }
-  
-.educate .educate-content .text-2{
-  font-size: 50px;
-  font-weight: 600;
-  margin-left: -3px;
+
+.educate .educate-content .card i{
+	font-size: 50px;
+	color: #ff7200;
 }
-  
-.educate .educate-content .text-3{
+
+.educate .educate-content .card .text{
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 0.5rem;
+  font-weight: 150;
+}
+
+.educate-content p{
+  font-size: 15px;
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.educate .box2{
+  width: calc(100% - 20px);
+  margin-top: 35px ;
+	text-align: center;
+	padding: 20px 25px;
+}
+
+.box2 .text-2{
   font-size: 20px;
   font-weight: 350;
   margin-left: -3px;
 }
-  
-.educate .educate-content .text-4{
-  font-size: 20px;
-  font-weight: 350;
-  margin-left: -3px;
-}
-  
-.educate .button{
+
+.educate .box2 .button{
   margin: 14px 0;
 }
  
-.educate .button button{
+.educate .box2 .button button{
   outline: none;
-  color:#fff;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 9px 125px;
-  background: #1c1d1f;
-  border: 2px solid transparent;
-  transition: all 0.4 ease;
+	color:#fff;
+	font-size: 20px;
+	font-weight: 500;
+	padding: 5px 50px;
+	background: #ff7200;
+  border: 2px solid #ff7200;
+	transition: all 0.3s ease;
+  border-radius: 6px;
 }
-  
-.educate .button button:hover{
+
+.educate .box2 .button button:hover{
   color: #fff;
   background-color: black;
   border-color: #1c1d1f ;
 }
 /*educate section styling finish*/
 
-
-
-
-  /*responsive media query start*/
-  @media (max-width: 1208px){
-    .max-width{
-      padding: 0 50px;
-    }
-    .menu-btn{
-      display: block;
-      z-index: 999;
-    }
-    .menu-btn i.active:before{
-      content: "\f00d";
-    }
-    .navbar .menu{
-      position: fixed;
-      height: 100vh;
-      width: 100%;
-      left: -100%;
-      top: 0;
-      background: #111;
-      text-align: center;
-      padding-top: 80px;
-      transition: all 0.3s ease;
-    }
-    .navbar .menu.active{
-      left: 0;
-    }
-    .navbar .menu li{
-      display: block;
-    }
-    .navbar .menu li a{
-      display: inline-block;
-      margin: 20px 0;
-      font-size: 25px;
-    }
-    .navbar .search{
-      display: none;
-    }
-    .navbar .srch{
-      display: none;
-    }
+/*responsive media query start*/
+@media (max-width: 1208px){
+  .max-width{
+    padding: 0 50px;
   }
-
-  .footer{
-    font-family: 'Poppins',sans-serif;
+  .menu-btn{
+    display: block;
+    z-index: 999;
   }
-
-  footer{
-    background: #111;
-    padding: 20px 23px;
-    color:#fff;
-    left: 0;
-    bottom: 0;
+  .menu-btn i.active:before{
+    content: "\f00d";
+  }
+  .navbar .menu{
+    position: fixed;
+    height: 100vh;
     width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
     text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
   }
+  .navbar .menu.active{
+    left: 0;
+  }
+  .navbar .menu li{
+    display: block;
+  }
+  .navbar .menu li a{
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+  .navbar .search{
+    display: none;
+  }
+  .navbar .srch{
+    display: none;
+  }
+}
 
-  footer span a{
-     color:#ff7200;
-     text-decoration: none;
-  }
+.footer{
+  font-family: 'Poppins',sans-serif;
+}
 
-  footer span a:hover{
-    text-decoration: underline;
-  }
-  
- 
+footer{
+  background: #111;
+  padding: 20px 23px;
+  color:#fff;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer span a{
+   color:#ff7200;
+   text-decoration: none;
+}
+
+footer span a:hover{
+  text-decoration: underline;
+}
