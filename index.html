@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoCampus.com</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -37,8 +38,11 @@
 <!-- section start-->
 <section class="home" id="home">
     <div class="max-width">
-        <div class="home-content">
-            <h1>Yeni Nesil <br><span class="third-letter">Eğitim</span> <br>Platformu</h1>
+        <div class="home-content anime-left">
+            <h1>Yeni Nesil <br>
+                <div class="ani anime-top">
+                    <span class="third-letter anime-top">Eğitim</span>
+                </div>Platformu</h1>
             <p>Kampüs bir tık uzağında...</p>
             <!--<button class="cn"><a href="contact.html">Bize Ulaşın</a></button>-->
         </div>
@@ -50,14 +54,14 @@
 <section id="about">
     <div class="about">
         <div class="container">
-            <div class="about-title">
+            <div class="about-title anime-top">
                 <h2>BİZ KİMİZ</h2>
             </div>
             <div class="about-content">
-                <div class="about-img">
+                <div class="about-img anime-left">
                     <img src="images/education.jpeg" alt="">
                 </div>
-                <div class="about-text">
+                <div class="about-text anime-right">
                     <h4>Hakkımızda</h4>
                     <p>Özellikle üniversite öğrencilerin yönelik sunduğumuz zengin ders içeriklerimizden
                         ihtiyaca göre yararlanma imkanı sağlıyoruz. Canlı ders, ders içi katılım, değerlendirme
@@ -66,7 +70,7 @@
                     </p>
                     <a href="#" class="btn-more">Daha Fazla</a>
                 </div>
-                <div class="about-text">
+                <div class="about-text anime-left">
                     <h4>Hedeflerimiz</h4>
                     <p>Özellikle üniversite öğrencilerin yönelik sunduğumuz zengin ders içeriklerimizden
                         ihtiyaca göre yararlanma imkanı sağlıyoruz. Canlı ders, ders içi katılım, değerlendirme
@@ -75,7 +79,7 @@
                     </p>
                     <a href="#" class="btn-more">Daha Fazla</a>
                 </div>
-                <div class="about-img">
+                <div class="about-img anime-right">
                     <img src="images/education3.jpeg" alt="">
                 </div>
             </div>
@@ -88,32 +92,32 @@
 <section id="educate">
     <div class="educate">
         <div class="container">
-            <div class="educate-title">
+            <div class="educate-title anime-top">
                 <h2>PLATFORMUMUZDA EĞİTİM VERİN</h2>
             </div>
             <div class="educate-content">
-                <div class="card">
+                <div class="card anime-left">
                     <div class="box">
                         <i class="fas fa-paint-brush"></i>
                         <div class="text">Kendi tarzınızda öğretin</div>
                         <p>Dilediğiniz kursu, dilediğiniz şekilde yayınlayın ve kendi içeriğiniz üzerinde her zaman kontrol sahibi olun.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card anime-bottom">
                     <div class="box">
                         <i class="fas fa-chart-line"></i>
                         <div class="text">Öğrencilere ilham verin</div>
                         <p>Bildiklerinizi öğretin ve öğrencilerin ilgi alanlarını keşfetmesine, yeni yetkinlikler edinmesine ve kariyerlerinde ilerlemesine yardımcı olun.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card anime-right">
                     <div class="box">
                         <i class="fas fa-code"></i>
                         <div class="text">Kazançlı çıkın</div>
                         <p>Profesyonel ağınızı genişletin, uzmanlık alanınızı oluşturun ve her ücretli kayıttan para kazanın.</p>
                     </div>
                 </div>
-                <div class="box2">
+                <div class="box2 anime-bottom">
                     <div class="text-2">Eğitmen olun ve kendi hayatınız başta olmak üzere hayatları değiştirin.</div> 
                     <div class="button">
                         <button>Başlayın</button>
@@ -124,6 +128,43 @@
     </div>
 </section>
 <!-- educate section1 finish-->
+
+<!--Scrool Reveal Script Start-->
+<script> 
+
+    ScrollReveal().reveal('.anime-left',{delay:250});
+    ScrollReveal().reveal('.anime-right',{delay:500});
+    ScrollReveal().reveal('.anime-top',{delay:450});
+    ScrollReveal().reveal('.anime-bottom',{delay:1000});
+
+    window.sr = ScrollReveal();
+    sr.reveal('.anime-left',{
+        origin: 'left',
+        duration: 1000,
+        distance: '25rem',
+        delay: 600,
+    });
+    sr.reveal('.anime-right',{
+        origin: 'right',
+        duration: 1000,
+        distance: '25rem',
+        delay: 600,
+    });
+    sr.reveal('.anime-top',{
+        origin: 'top',
+        duration: 1000,
+        distance: '25rem',
+        delay: 500,
+    });
+    sr.reveal('.anime-bottom',{
+        origin: 'bottom',
+        duration: 1000,
+        distance: '25rem',
+        delay: 600,
+    });
+</script>
+
+<!--Scrool Reveal Script Finish-->
 
 <!-- footer section start-->
 <footer>

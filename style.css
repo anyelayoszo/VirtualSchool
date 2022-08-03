@@ -153,7 +153,7 @@
 .menu-btn{
   color: #fff;
   font-size: 23px;
-  cursor: pointer; /fare imleci basılabilir oluyor
+  cursor: pointer; /*fare imleci basılabilir oluyor*/
   display: none;
 }
 
@@ -223,7 +223,7 @@ section{
   height: 40px;
   background: #ff7200;
   border: none;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   margin-left: 20px;
   font-size: 18px;
   border-radius: 10px;
@@ -252,12 +252,12 @@ section{
 
 /*about section styling start*/
 .about{
-  margin-bottom: 150px;
+  margin-bottom: 15px;
   font-family: 'Nunito Sans', sans-serif;
 }
 
 .about .about-title{
-margin: 30px 0;
+margin: 40px 0;
 }
 
 .about-title h2{
@@ -342,8 +342,12 @@ h4{
 
 /*educate section styling start*/
 .educate{
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   font-family: 'Poppins',sans-serif;
+}
+
+.educate .container{
+  margin: 0 0;
 }
 
 .educate .educate-title{
@@ -378,9 +382,11 @@ margin: 30px 0;
 
 .educate .educate-content .card{
 	width: calc(33% - 20px);
-	text-align: center;
-	border-radius: 6px;
-	padding: 20px 25px;
+	height: 300px;
+  text-align: center;
+  border-radius: 6px;
+	padding: 25px 45px;
+  /*background-color: #fff1e6;*/
 }
 
 .educate .educate-content .card .box{
@@ -442,6 +448,18 @@ margin: 30px 0;
   border-color: #1c1d1f ;
 }
 /*educate section styling finish*/
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
 
 /*responsive media query start*/
 @media (max-width: 1208px){
