@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Nunito+Sans:wght@200;300;400&family=Raleway:wght@200;300&family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Nunito+Sans:wght@200;300;400;500;600;700;800&family=Raleway:wght@200;300&family=Roboto+Mono:wght@300&display=swap');
 
 *,
 *::before,
@@ -198,15 +198,8 @@ section{
 }
 
 .home-content h1 {
-  /*position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(50%);*/
   font-family: 'Roboto Mono', monospace;
   font-size: 50px;
-  /*padding-left: 20px;
-  margin-top: 9%;
-  letter-spacing: 2px;*/
 }
 
 .home-content p {
@@ -271,7 +264,7 @@ margin: 40px 0;
   
 .about-title h2::after{
   content: "";
-  width: 120px;
+  width: 80px;
   height: 3px;
   background-color: #111;
   margin: 0 auto;
@@ -328,7 +321,7 @@ h4{
   font-weight: 500;
   padding: 5px 15px;
   margin-top: 20px;
-  margin-left: 12.5%;
+  margin-left: 33%;
   border-radius: 6px;
   border: 2px solid #ff7200;
   transition: all 0.3s ease;
@@ -365,7 +358,7 @@ margin: 30px 0;
   
 .educate-title h2::after{
   content: "";
-  width: 120px;
+  width: 350px;
   height: 3px;
   background-color: #111;
   margin: 0 auto;
@@ -449,17 +442,219 @@ margin: 30px 0;
 }
 /*educate section styling finish*/
 
-.reveal{
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: all 2s ease;
+/*instructor section styling start*/
+
+.instructor{
+  display: flex;
+  overflow-x: auto;
 }
 
-.reveal.active{
-  transform: translateY(0px);
-  opacity: 1;
+/*.instructor::-webkit-scrollbar{
+  width: 0;
+}*/
+
+.instructor-item{
+  float: left;
+  min-width: 25%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  overflow-x: auto;
+  margin: 10px 10px;
+  border-radius: 10px;
 }
+
+/*.instructor-item .container{
+  contain: 100px;
+  padding: 10px;
+  margin: 10px;
+}*/
+
+.instructor-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay{
+  width: 100%;
+  height: 100%;
+  background-color: #ff8019;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0.8;
+  display: block;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+.overlay .text-1{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 7px;
+}
+
+.overlay .text-2{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.instructor-item:hover .overlay{
+  top: 80%;
+}
+
+/*instructor section styling finish*/
+
+/*Contact Section */
+.contact{
+  margin-bottom: 100px;
+  font-family: 'Poppins',sans-serif;
+}
+
+.contact .container{
+  margin: 0 0;
+}
+
+.contact .contact-title{
+margin: 30px 0;
+}
+
+.contact .contact-title h2{
+  width: 100%;
+  text-align: center;
+  margin: 0 ;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+ }
+  
+.contact .contact-title h2::after{
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: #111;
+  margin: 0 auto;
+  display: block;
+  margin-top: 5px;
+}
+
+.contact .contact-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .contact-content .text{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact .contact-content .column-left{
+  width: calc(45% - 20px);
+}
+
+.contact .contact-content .column-left p{
+  text-align: justify;
+}
+
+.contact .contact-content .column-left .icons{
+  margin: 10px 0;
+}
+
+.contact .contact-content .row{
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+
+.contact .contact-content .row .info{
+  margin-left: 30px;
+}
+
+.contact .contact-content .row i{
+  font-size: 25px;
+  color: #ff7200;
+}
+
+.contact .contact-content .info .head{
+  font-weight: 500;
+}
+
+.contact .contact-content .info .sub-title{
+  color:#333;
+}
+
+.contact .column-right form .fields{
+  display: flex;
+}
+
+.contact .column-right form .field,
+.contact .column-right form .fields .field{
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.contact .column-right form .textarea{
+  height: 80px;
+  width: 100%;
+}
+  
+.contact .column-right form .name{
+  margin-right: 10px;
+}
+
+.contact .column-right form .email{
+  margin-left: 10px;
+}
+
+.contact .column-right form .field input,
+.contact .column-right form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  border:1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: 'Poppins','sans-serif';
+}
+
+.contact .column-right form .textarea textarea{
+  padding-top: 10px;
+  resize:none;
+}
+
+.contact .column-right form .button{
+  height: 47px;
+  width: 170px;
+}
+
+.contact .column-right form .button button{
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ff7200;
+  background: #ff7200;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact .column-right form .button button:hover{
+  color: #ff7200;
+  background: none;
+}
+/*contact finish
 
 /*responsive media query start*/
 @media (max-width: 1208px){

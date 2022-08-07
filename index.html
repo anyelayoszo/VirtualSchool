@@ -15,11 +15,13 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <div class="logo"><a href="index.html">goCampus</a></div>
+            <div class="logo">
+                <a href="index.html">goCampus</a>
+            </div>
             <ul class="menu">
-                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="#kim">Hakkımızda</a></li>
                 <li><a href="#egitim">Eğitim Verin</a></li>
-                <li><a href="contact.html">Bize Ulaşın</a></li>
+                <li><a href="#contact">Bize Ulaşın</a></li>
             </ul>
             <div class="search">
                 <input class="srch" type="search" name="" placeholder="Ara">
@@ -35,7 +37,7 @@
         </div>
     </nav>
 
-<!-- section start-->
+<!-- Home Section Start -->
 <section class="home" id="home">
     <div class="max-width">
         <div class="home-content anime-left">
@@ -48,14 +50,14 @@
         </div>
     </div>
 </section>
-</div>
+<!-- Home Section Start -->
 
-<!-- about section start-->
+<!-- About Section Start -->
 <section id="about">
     <div class="about">
         <div class="container">
             <div class="about-title anime-top">
-                <h2>BİZ KİMİZ</h2>
+                <a name="kim"></a><h2>BİZ KİMİZ</h2>
             </div>
             <div class="about-content">
                 <div class="about-img anime-left">
@@ -86,14 +88,14 @@
         </div>
     </div>
 </section>
-<!-- about section finish-->
+<!-- About Section Fnish -->
 
-<!-- educate section1 start-->
+<!-- Educate Section Start -->
 <section id="educate">
     <div class="educate">
         <div class="container">
             <div class="educate-title anime-top">
-                <h2>PLATFORMUMUZDA EĞİTİM VERİN</h2>
+                <a name="egitim"></a><h2>PLATFORMUMUZDA EĞİTİM VERİN</h2>
             </div>
             <div class="educate-content">
                 <div class="card anime-left">
@@ -127,49 +129,168 @@
         </div>
     </div>
 </section>
-<!-- educate section1 finish-->
+<!-- Educate Section Finish -->
 
-<!--Scrool Reveal Script Start-->
+<!-- Instructors Section Start -->
+
+<section id="instructor">
+    <div class="instructor">
+        <div class="instructor-item">
+            <img src="images/aca1.jpg" alt="">
+            <div class="overlay">
+                <div class="text-1">MURAT UYGUN</div>
+                <div class="text-2">Nesne Tabanlı Programlama</div> 
+            </div>
+        </div>
+        <div class="instructor-item">
+            <img src="images/aca4.jpg" alt="">
+            <div class="overlay">
+                <div class="text-1">İLAYDA ÖZSOY</div>
+                <div class="text-2">Mobil Uygulama</div> 
+            </div>
+        </div>
+        <div class="instructor-item">
+            <img src="images/aca2.jpg" alt="">
+            <div class="overlay">
+                <div class="text-1">İBRAHİM KEMER</div>
+                <div class="text-2">Diksiyon</div> 
+            </div>
+        </div>
+        <div class="instructor-item">
+            <img src="images/aca3.jpg" alt="">
+            <div class="overlay">
+                <div class="text-1">NİHAN DEMİR</div>
+                <div class="text-2">Grafik Tasarım</div>
+            </div>
+        </div>
+        <div class="instructor-item">
+            <img src="images/aca6.jpg" alt="">
+            <div class="overlay">
+                <div class="text-1">SEMİH DALGIN</div>
+                <div class="text-2">İletişim Becerileri</div> 
+            </div>
+        </div>
+        <div class="instructor-item">
+            <img src="images/aca7.jpg" alt="">
+            <div class="overlay">
+                <div class="text-1">HANDE KASAP</div>
+                <div class="text-2">İngilizce</div> 
+            </div>
+        </div>
+        <div class="instructor-item">
+            <img src="images/aca5.jpg" alt="">
+            <div class="overlay">
+                <div class="text-1">RECEP ÖZEN</div>
+                <div class="text-2">Lineer Cebir</div> 
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Instructors Section Finish -->
+
+<!-- Contact Section Start -->
+<section id="contact">
+    <div class="contact">
+        <div class="container">
+            <div class="contact-title anime-top">
+                <a name="contact"></a><h2>BİZE ULAŞIN</h2>
+            </div>
+            <div class="contact-content">
+                <div class="column-left">
+                    <p>Görüş ve önerileriniz için buradan ulaşabilirsiniz.</p>
+                <div class="icons">
+                    <div class="row">
+                        <i class="fas fa-user"></i>
+                        <div class="info">
+                            <div class="head">Name</div>
+                            <div class="sub-title">GoCampus Company</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info">
+                            <div class="head">Adres</div>
+                            <div class="sub-title">İstanbul,Türkiye</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info">
+                            <div class="head">Email</div>
+                            <div class="sub-title">info@gocampus.com.tr</div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="column-right">
+                <div class="text">İletişim Formu</div>
+                <form action="#">
+                    <div class="fields">
+                        <div class="field name">
+                            <input type="text" placeholder="Name" required>
+                        </div>
+                        <div class="field email">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="field textarea">
+                        <textarea cols="30" rows="10" placeholder="Describe project.." required></textarea>
+                    </div>
+                    <div class="button">
+                        <button type="submit">Mesaj Gönder</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Contact Section Finish -->
+
+<!-- Scrool Reveal Script Start
+ScrollReveal({ reset: true }); -->
 <script> 
 
-    ScrollReveal().reveal('.anime-left',{delay:250});
-    ScrollReveal().reveal('.anime-right',{delay:500});
-    ScrollReveal().reveal('.anime-top',{delay:450});
-    ScrollReveal().reveal('.anime-bottom',{delay:1000});
+    
 
     window.sr = ScrollReveal();
     sr.reveal('.anime-left',{
         origin: 'left',
-        duration: 1000,
+        duration: 500,
         distance: '25rem',
-        delay: 600,
+        delay: 500,
     });
     sr.reveal('.anime-right',{
         origin: 'right',
-        duration: 1000,
+        duration: 500,
         distance: '25rem',
         delay: 600,
     });
     sr.reveal('.anime-top',{
         origin: 'top',
-        duration: 1000,
+        duration: 500,
         distance: '25rem',
-        delay: 500,
+        delay: 600,
     });
     sr.reveal('.anime-bottom',{
         origin: 'bottom',
-        duration: 1000,
+        duration: 500,
         distance: '25rem',
         delay: 600,
     });
 </script>
+<!-- Scrool Reveal Script Finish -->
 
-<!--Scrool Reveal Script Finish-->
-
-<!-- footer section start-->
+<!-- Footer Section Start -->
 <footer>
     <span>Created By <a href="#">GoCampus</a> | <span class="far fa-copyright"></span>2022 All rights reserved</span> 
 </footer>
+<!-- Footer Section Finish -->
+
 <script src="script.js"></script>
 </body>
 </html>
