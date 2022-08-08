@@ -264,7 +264,7 @@ margin: 40px 0;
   
 .about-title h2::after{
   content: "";
-  width: 80px;
+  width: 5%;
   height: 3px;
   background-color: #111;
   margin: 0 auto;
@@ -335,7 +335,7 @@ h4{
 
 /*educate section styling start*/
 .educate{
-  margin-bottom: 100px;
+  margin-bottom: 0;
   font-family: 'Poppins',sans-serif;
 }
 
@@ -358,7 +358,7 @@ margin: 30px 0;
   
 .educate-title h2::after{
   content: "";
-  width: 350px;
+  width: 25%;
   height: 3px;
   background-color: #111;
   margin: 0 auto;
@@ -445,35 +445,61 @@ margin: 30px 0;
 /*instructor section styling start*/
 
 .instructor{
-  display: flex;
+  margin: 0 0;
   overflow-x: auto;
 }
 
-/*.instructor::-webkit-scrollbar{
-  width: 0;
-}*/
+.instructor .instructor-title{
+  margin: 30px 0;
+}
+
+.instructor-title h2{
+  width: 100%;
+  text-align: center;
+  margin: 0 ;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+  
+.instructor-title h2::after{
+  content: "";
+  width: 10%;
+  height: 3px;
+  background-color: #111;
+  margin: 0 auto;
+  display: block;
+  margin-top: 5px;
+}
+
+.instructor .container{
+  margin-left: 0;
+  margin-right: 0;
+  display: flex; /*yan yana*/
+  overflow-x: auto;
+  /*justify-content: space-between;*/
+}
 
 .instructor-item{
   float: left;
   min-width: 25%;
   height: 300px;
+  overflow-x: auto;
+  justify-content: center;
   overflow: hidden;
   position: relative;
-  overflow-x: auto;
   margin: 10px 10px;
+  padding-left: 0;
+  padding-right: 0;
   border-radius: 10px;
+  
 }
 
-/*.instructor-item .container{
-  contain: 100px;
-  padding: 10px;
-  margin: 10px;
-}*/
-
 .instructor-item img{
-  width: 100%;
+  width: 300px;
   height: 100%;
   object-fit: cover;
+  overflow-x: scroll;
 }
 
 .overlay{
