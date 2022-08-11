@@ -442,7 +442,7 @@ margin: 30px 0;
 }
 /*educate section styling finish*/
 
-/*instructor section styling start*/
+/*instructor section styling start
 
 .instructor{
   margin: 0 0;
@@ -475,9 +475,9 @@ margin: 30px 0;
 .instructor .container{
   margin-left: 0;
   margin-right: 0;
-  display: flex; /*yan yana*/
+  display: flex; /*yan yana
   overflow-x: auto;
-  /*justify-content: space-between;*/
+  justify-content: space-between;
 }
 
 .instructor-item{
@@ -535,6 +535,165 @@ margin: 30px 0;
 }
 
 /*instructor section styling finish*/
+
+/*instructordeneme section styling start*/
+
+.instructor{
+  min-height: 100vh;
+  margin: 0 0;
+  overflow-x: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.instructor .instructor-title{
+  margin: 30px 0;
+}
+
+.instructor-title h2{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+  
+.instructor-title h2::after{
+  content: "";
+  width: 10%;
+  height: 3px;
+  background-color: #111;
+  margin: 0 auto;
+  display: block;
+  margin-top: 5px;
+}
+
+.slide-container{
+  max-width: 1700px;
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+}
+.slide-content{
+  margin: 40px 50px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card{
+  border-radius: 25px;
+  background-color: #fafafa;
+}
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ff7200;
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #ff7200;
+}
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: #fafafa;
+}
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #afa4b2;
+  padding: 3px;
+}
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ff7200;
+}
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.vm-button{
+  border: none;
+  font-size: 16px;
+  color: #afa4b2;
+  padding: 8px 16px;
+  background-color: #ff7200;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.vm-button:hover{
+  background: #ff7200;
+}
+
+.swiper-navBtn{
+  color: #ff7200;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: #ff7200;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: #ff7200;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #ff7200;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
+}
+
+/*instructordeneme section styling finish*/
 
 /*Contact Section */
 .contact{
